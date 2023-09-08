@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import variables from '@/src/styles/variable.module.scss'
 import Image from "next/image"
 
-export const Hero = ({ Title, Content }) => {
+export const Hero = ({ Title }) => {
     return (
         <>
             <main style={{ background: variables.primaryColor }}>
@@ -20,7 +20,10 @@ export const Hero = ({ Title, Content }) => {
                                         alt="Boo.world"
                                     />
                                     <h1 style={{ color: variables.mainColor }}>{Title ? Title : 'Title'}</h1>
-                                    <p style={{ color: variables.secondColor }}>{Content ? Content : 'Space to explain'}</p>
+                                    <p style={{ color: variables.secondColor }}>Login: boo@boo.world.com</p>
+                                    <p style={{ color: variables.secondColor }}>Password: Boo@123</p>
+                                    <p style={{ color: variables.secondColor }}>Or feel free to register.</p>
+
                                 </article>
                             </Col>
                             <Col md={6} className="d-flex flex-column justify-content-center align-items-center p-20 p-4">
