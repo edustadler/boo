@@ -17,12 +17,12 @@ export const Hero = ({ Title }) => {
                                         width={200}
                                         height={200}
                                         className="motion-boo"
-                                        alt="Boo.world"
+                                        alt="boo.world"
                                     />
                                     <h1 style={{ color: variables.mainColor }}>{Title ? Title : 'Title'}</h1>
                                     <p style={{ color: variables.secondColor }}>Login: boo@boo.world.com</p>
                                     <p style={{ color: variables.secondColor }}>Password: Boo@123</p>
-                                    <p style={{ color: variables.secondColor }}>Or feel free to register.</p>
+                                    <p style={{ color: variables.secondColor }}>Or feel free to register!</p>
 
                                 </article>
                             </Col>
