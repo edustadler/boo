@@ -7,7 +7,7 @@ export const FriendListWidget = ({ userId }) => {
     const dispatch = useDispatch();
     const token = useSelector((state) => state.auth.token);
     const friends = useSelector((state) => state.auth.user.friends) || [];
-    const API_URL = 'http://localhost:3001'
+    const API_URL = 'https://server-ggc6w24fq-edustadler.vercel.app'
 
     const getFriends = async () => {
         const response = await fetch(

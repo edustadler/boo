@@ -19,7 +19,7 @@ export const MyPostWidget = ({ picturePath }) => {
     const user = useSelector((state) => state.auth.user);
     const { _id } = user;
     const token = useSelector((state) => state.auth.token);
-    const API_URL = 'http://localhost:3001'
+    const API_URL = 'https://server-ggc6w24fq-edustadler.vercel.app'
     const { Dragger } = Upload;
     const [form] = useForm();
 

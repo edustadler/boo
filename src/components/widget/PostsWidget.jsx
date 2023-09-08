@@ -7,7 +7,7 @@ export const PostsWidget = ({ userId, isProfile = false }) => {
     const dispatch = useDispatch()
     const token = useSelector((state) => state.auth.token);
     const posts = useSelector((state) => state.auth.posts);
-    const API_URL = 'http://localhost:3001'
+    const API_URL = 'https://server-ggc6w24fq-edustadler.vercel.app'
 
     const getPosts = async () => {
         const response = await fetch(`${API_URL}/posts`, {

@@ -23,7 +23,7 @@ export const FormLogin = () => {
     const [loginLoading, setLoginLoading] = useState(false);
     const [loginError, setLoginError] = useState(null);
 
-    const API_URL = 'http://localhost:3001'
+    const API_URL = 'https://server-ggc6w24fq-edustadler.vercel.app'
 
     const [messageApi, contextHolder] = message.useMessage();
 

@@ -14,7 +14,7 @@ export const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
     const isFriend = friends.find((friend) => friend._id === friendId);
     const isNotOwnId = friendId !== _id;
 
-    const API_URL = 'http://localhost:3001'
+    const API_URL = 'https://server-ggc6w24fq-edustadler.vercel.app'
 
     const patchFriend = async () => {
         try {

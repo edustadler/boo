@@ -17,7 +17,7 @@ export const PostWidget = ({ postId, postUserId, name, description, location, pi
     const loggedInUserId = useSelector((state) => state.auth.user._id);
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
-    const API_URL = 'http://localhost:3001'
+    const API_URL = 'https://server-ggc6w24fq-edustadler.vercel.app'
 
     const patchLike = async () => {
         const response = await fetch(`${API_URL}/posts/${postId}/like`, {

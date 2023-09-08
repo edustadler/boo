@@ -11,9 +11,8 @@ const nextConfig = {
         formats: ['image/avif', 'image/webp'],
         remotePatterns: [
             {
-                protocol: 'http',
-                hostname: 'localhost',
-                port: '3001',
+                protocol: 'https',
+                hostname: 'https://server-ggc6w24fq-edustadler.vercel.app',
                 pathname: '/assets/**',
             },
         ],
