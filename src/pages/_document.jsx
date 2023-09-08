@@ -4,7 +4,13 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 const MyDocument = () => (
     <Html lang="en">
-        <Head />
+        <Head>
+            <title>Boo study</title>
+            <meta
+                name="description"
+                content="I hope you like it, boo.world"
+            />
+        </Head>
         <body>
             <Main />
             <NextScript />
