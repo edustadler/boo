@@ -1,0 +1,50 @@
+@import "./variable.module.scss";
+
+.input-post {
+    &::placeholder {
+        color: $second-color;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        border: none !important;
+    }
+}
+
+.upload-post {
+    .ant-form-item-row {
+        width: 100%;
+    }
+
+    :where(.css-dev-only-do-not-override-nnuwmp).ant-upload-wrapper {
+        .ant-upload-drag {
+            border-color: #303030 !important;
+
+            &:hover {
+                border-color: $main-color !important;
+            }
+        }
+
+        .anticon {
+            color: $second-color !important;
+        }
+
+        .anticon-delete {
+            color: $second-color !important;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+        .ant-upload-list {
+            .ant-upload-list-item {
+                .ant-upload-list-item-actions {
+                    .ant-upload-list-item-action {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.row>* {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+:root {
+  --shadow-color: rgba(255, 255, 255, .25);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  } */
+}
+
+body {
+  background-color: #000;
+}
+
+:where(.css-dev-only-do-not-override-nnuwmp).ant-btn-primary {
+  background-color: #4edcd8;
+}
+
+.w-sx-80-md-50 {
+  width: 50% !important;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+
+.p-20 {
+  padding-left: 4.25rem !important;
+  padding-right: 4.25rem !important;
+}
+
+.shadow-white {
+  box-shadow: 0px 0px 24px var(--shadow-color);
+}
+
+.radius-30 {
+  border-radius: 1.875rem;
+}
+
+.flex-column-to-row {
+  flex-direction: row;
+}
+
+.btn-logout {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #4edcd8;
+  --bs-btn-border-color: #4edcd8;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #4edcd8;
+  --bs-btn-hover-border-color: #4edcd8;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #4edcd8;
+  --bs-btn-active-border-color: #4edcd8;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #4edcd8;
+}
+
+.btn-logout:hover {
+  background-color: #4edcd8;
+  border-color: #4edcd8;
+}
+
+
+
+@media(max-width: 1440px) {
+  .w-sx-80-md-50 {
+    width: 70% !important;
+  }
+}
+
+@media(max-width:1080px) {
+  .w-sx-80-md-50 {
+    width: 80% !important;
+  }
+
+  .p-20 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .w-25 {
+    width: 80% !important;
+  }
+
+  .w-50 {
+    width: 100% !important;
+  }
+
+  .flex-column-to-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-order {
+    order: 3;
+  }
+}

@@ -1,0 +1,20 @@
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+.motion-boo {
+    animation: moveDown 1s ease infinite alternate;
+}
+
+.primary-hover {
+    background-color: #4edcd8 !important;
+
+    &:hover {
+        background-color: #4edcd7bd !important;
+    }
+}

@@ -1,0 +1,15 @@
+@import './variable.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+a,
+span {
+    font-family: 'Roboto', sans-serif;
+    /* color: $main-color; */
+}
+
