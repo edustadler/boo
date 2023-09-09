@@ -21,7 +21,6 @@ export const FormLogin = () => {
     const [imageBase64, setImageBase64] = useState(null);
     const [registerLoading, setRegisterLoading] = useState(false);
     const [loginLoading, setLoginLoading] = useState(false);
-    const [loginError, setLoginError] = useState(null);
 
     const API_URL = 'https://server-ggc6w24fq-edustadler.vercel.app'
 
@@ -228,7 +227,7 @@ export const FormLogin = () => {
                                 <Button type="primary" htmlType="submit" noStyle className="w-100 primary-hover" loading={registerLoading}>
                                     <span style={{ color: variables.primaryColor }}>Register</span>
                                 </Button>
-                                <span style={{ color: variables.secondColor }}>Already have an account? <a href="javascript:void(0)" onClick={toggleForm} loading={loginLoading}>Login here!</a></span>
+                                <span style={{ color: variables.secondColor }}>Already have an account? <a href="javascript:void(0)" onClick={toggleForm}>Login here!</a></span>
                             </Form.Item>
                         </Form>
                     </>
@@ -280,10 +279,10 @@ export const FormLogin = () => {
                             </Form.Item>
 
                             <Form.Item>
-                                <Button type="primary" htmlType="submit" noStyle className="w-100 primary-hover">
+                                <Button type="primary" htmlType="submit" noStyle className="w-100 primary-hover" loading={loginLoading}>
                                     <span style={{ color: variables.primaryColor }}>Log in</span>
                                 </Button>
-                                <span style={{ color: variables.secondColor }}>Or <a href="javascript:void(0)" onClick={toggleForm}>register now!</a></span>
+                                <span style={{ color: variables.secondColor }}>Or <span style={{cursor: 'pointer'}} onClick={toggleForm}>register now</span></span>
                             </Form.Item>
                         </Form>
                     </>

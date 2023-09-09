@@ -28,9 +28,16 @@ function MyApp({ Component, pageProps }) {
         }
     }, [isAuth, router.pathname]);
 
-    const routes = isAuth ? (
+    const routes = isAuth ? (<>
+        <head>
+            <title>Boo study</title>
+            <meta
+                name="description"
+                content="I hope you like it, boo.world"
+            />
+        </head>
         <Component {...pageProps} />
-    ) : (
+    </>) : (
         <LoginPage />
     );
 
