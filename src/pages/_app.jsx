@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { Provider, useSelector } from 'react-redux';
+import { Provider, useDispatch, useSelector } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from '../redux/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,8 +15,8 @@ import ProfilePage from './profile';
 
 function MyApp({ Component, pageProps }) {
     const router = useRouter();
+    const dispatch = useDispatch()
     const isAuth = useSelector((state) => {
-        console.log("Token from Redux state:", state.auth.token);
         return Boolean(state.auth.token);
     });
 
@@ -47,7 +47,6 @@ function MyApp({ Component, pageProps }) {
 export default function AppWrapper({ Component, pageProps }) {
     return (
         <Provider store={store}>
-            {/* Wrap your app with PersistGate */}
             <PersistGate loading={null} persistor={persistor}>
                 <MyApp Component={Component} pageProps={pageProps} />
             </PersistGate>
