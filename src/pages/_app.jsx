@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }) {
     });
 
     useEffect(() => {
+        const isAuth = Boolean(store.getState().auth.token);
         if (!isAuth && router.pathname !== '/') {
             router.push('/');
         } else if (isAuth && router.pathname === '/') {
