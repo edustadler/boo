@@ -136,7 +136,7 @@ export const MyPostWidget = ({ picturePath }) => {
                         </Form.Item> */}
                         <Form.Item className="d-flex justify-content-end m-0">
                             <Button type="primary" htmlType="submit" className="primary-hover">
-                                <span style={{ color: variables.primaryColor }}>Boo!</span>
+                                <span style={{ color: variables.primaryColor }}>Tzup!</span>
                             </Button>
                         </Form.Item>
                     </Form>

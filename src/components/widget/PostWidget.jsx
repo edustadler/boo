@@ -56,7 +56,7 @@ export const PostWidget = ({ postId, postUserId, name, description, location, pi
                     )
                 }
                 <div className="d-flex gap-3 my-4">
-                    <Badge count={likeCount} color={variables.mainColor} style={{ color: variables.primaryColor }}>
+                    <Badge count={likeCount} color={variables.orangeColor} style={{ color: variables.primaryColor }}>
                         <div onClick={patchLike} style={{ cursor: 'pointer' }}>
                             {
                                 isLiked ? (

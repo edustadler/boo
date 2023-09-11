@@ -4,7 +4,7 @@ export default function LoginPage() {
     return (
         <>
             <Hero
-                Title={'BooShowcase'}
+                Title={'Tzup'}
             />
         </>
     )

@@ -29,7 +29,7 @@ body {
 }
 
 :where(.css-dev-only-do-not-override-nnuwmp).ant-btn-primary {
-  background-color: #4edcd8;
+  background-color: #FFCE1F;
 }
 
 .w-sx-80-md-50 {
@@ -60,23 +60,23 @@ body {
 
 .btn-logout {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #4edcd8;
-  --bs-btn-border-color: #4edcd8;
+  --bs-btn-bg: #FFCE1F;
+  --bs-btn-border-color: #FFCE1F;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #4edcd8;
-  --bs-btn-hover-border-color: #4edcd8;
+  --bs-btn-hover-bg: #FFCE1F;
+  --bs-btn-hover-border-color: #FFCE1F;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #4edcd8;
-  --bs-btn-active-border-color: #4edcd8;
+  --bs-btn-active-bg: #FFCE1F;
+  --bs-btn-active-border-color: #FFCE1F;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #4edcd8;
+  --bs-btn-disabled-bg: #FFCE1F;
 }
 
 .btn-logout:hover {
-  background-color: #4edcd8;
-  border-color: #4edcd8;
+  background-color: #FFCE1F;
+  border-color: #FFCE1F;
 }
 
 

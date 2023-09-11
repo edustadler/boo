@@ -10,6 +10,7 @@ import { Input } from "antd";
 import { MyPostWidget } from "@/src/components/widget/MyPostWidget";
 import { PostsWidget } from "@/src/components/widget/PostsWidget";
 import { FriendListWidget } from "@/src/components/widget/FriendListWidget";
+import tzupLogo from '@/src/images/tzup-logo.svg'
 
 export const config = {
     unstable_runtimeJS: false
@@ -38,7 +39,7 @@ export default function HomePage() {
     return (
         <>
             <nav className="p-4 pb-5 d-flex justify-content-between" style={{ background: variables.primaryColor }}>
-                <Image src={"https://boo.world/static/boo_text.svg"} width={60} height={60} style={{ filter: 'invert(98%) sepia(98%) saturate(0%) hue-rotate(108deg) brightness(104%) contrast(101%)' }} />
+                <Image src={tzupLogo} width={90} height={90} />
                 <Button className="btn-logout" onClick={handleSignOut}>Logout</Button>
             </nav>
             <main className='w-100 d-flex justify-content-between flex-column-to-row px-4 gap-5' style={{ background: variables.primaryColor }}>

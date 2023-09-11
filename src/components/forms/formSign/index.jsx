@@ -282,7 +282,7 @@ export const FormLogin = () => {
                                 <Button type="primary" htmlType="submit" noStyle className="w-100 primary-hover" loading={loginLoading}>
                                     <span style={{ color: variables.primaryColor }}>Log in</span>
                                 </Button>
-                                <span style={{ color: variables.secondColor }}>Or <span style={{cursor: 'pointer'}} onClick={toggleForm}>register now</span></span>
+                                <span style={{ color: variables.secondColor }}>Or <span style={{cursor: 'pointer', color: variables.orangeColor}} onClick={toggleForm}>register now</span></span>
                             </Form.Item>
                         </Form>
                     </>
