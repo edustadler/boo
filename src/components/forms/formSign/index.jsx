@@ -195,11 +195,11 @@ export const FormLogin = () => {
                                 rules={[
                                     {
                                         required: true,
-                                        message: "Please input your Email!", // Update the error message
+                                        message: "Please input your Email!",
                                     },
                                     {
                                         type: "email",
-                                        message: "Invalid email format", // Add an email format validation
+                                        message: "Invalid email format",
                                     },
                                 ]}
                             >
@@ -245,11 +245,11 @@ export const FormLogin = () => {
                             onFinish={onFinish}
                         >
                             <Form.Item
-                                name="email" // Change the field name to "email"
+                                name="email"
                                 rules={[
                                     {
                                         required: true,
-                                        message: "Please input your E-mail!", // Update the error message
+                                        message: "Please input your E-mail!",
                                     }
                                 ]}
                             >
