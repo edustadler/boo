@@ -118,7 +118,7 @@ export const MyPostWidget = ({ picturePath }) => {
                         <Form.Item name='description' style={{width: '100%', marginBottom: '0'}}>
                             <Input className="input-post" placeholder="What's up! Tell something new..." size="large" style={{ width: '90%', background: variables.primaryColor, border: 'none', color: variables.secondColor }} onChange={(e) => setPost(e.target.value)} value={post} />
                         </Form.Item>
-                        <Form.Item
+                        {/* <Form.Item
                             name="picturePath"
                             valuePropName="imageFile"
                             getValueFromEvent={normFile}
@@ -133,7 +133,7 @@ export const MyPostWidget = ({ picturePath }) => {
                                     Strictly prohibited from uploading company data or other banned files.
                                 </p>
                             </Dragger>
-                        </Form.Item>
+                        </Form.Item> */}
                         <Form.Item className="d-flex justify-content-end m-0">
                             <Button type="primary" htmlType="submit" className="primary-hover">
                                 <span style={{ color: variables.primaryColor }}>Boo!</span>
