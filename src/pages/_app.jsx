@@ -27,6 +27,8 @@ function MyApp({ Component, pageProps }) {
             router.push('/');
         } else if (isAuth && (router.pathname === '/' || router.pathname === '/homePage')) {
             router.push('/homePage', '/homePage');
+        } else if (isAuth && router.pathname === '/homePage') {
+            router.push('/', '/');
         }
     }, [isAuth, router.pathname]);
 
