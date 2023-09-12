@@ -180,12 +180,14 @@ export const FormLogin = () => {
                             <Form.Item
                                 name="location"
                                 style={{ width: '100%' }}
+                                rules={[{ required: true, message: 'Please insert your Location!' }]}
                             >
                                 <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Location" />
                             </Form.Item>
                             <Form.Item
                                 name="occupation"
                                 style={{ width: '100%' }}
+                                rules={[{ required: true, message: 'Please insert your Occupation!' }]}
                             >
                                 <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Occupation" />
                             </Form.Item>
