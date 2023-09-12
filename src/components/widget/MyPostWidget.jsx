@@ -115,9 +115,30 @@ export const MyPostWidget = ({ picturePath }) => {
             <div className="d-flex align-items-center gap-3">
                 <UserAvatar image={picturePath} />
                 <div style={{ width: '90%' }}>
-                    <Form onFinish={handlePost} form={form} className="d-flex align-items-center">
-                        <Form.Item name='description' style={{width: '100%', marginBottom: '0'}}>
+                    <Form onFinish={handlePost} form={form} className="d-flex align-items-end flex-column">
+                        <Form.Item name='description' style={{ width: '100%', marginBottom: '0' }}>
                             <Input className="input-post" placeholder="What's up! Tell something new..." size="large" style={{ width: '90%', background: variables.primaryColor, border: 'none', color: variables.secondColor }} onChange={(e) => setPost(e.target.value)} value={post} />
+                        </Form.Item>
+                        <Form.Item
+                            name="picturePath"
+                            valuePropName="imageFile"
+                            getValueFromEvent={normFile}
+                            className="d-flex justify-content-center w-100 upload-post"
+                        >
+                            <Upload accept=".jpg, .jpeg, .png" listType="picture-card" multiple={false} name="picturePath" maxCount={1}>
+                                <div style={{ color: variables.secondColor, width: '100%', minWidth: '100%' }}>
+                                    <PlusOutlined />
+                                    <div
+                                        style={{
+                                            marginTop: 8,
+                                            color: variables.secondColor,
+                                            width: '100%', minWidth: '100%' 
+                                        }}
+                                    >
+                                        Upload Photo
+                                    </div>
+                                </div>
+                            </Upload>
                         </Form.Item>
                         {/* <Form.Item
                             name="picturePath"
