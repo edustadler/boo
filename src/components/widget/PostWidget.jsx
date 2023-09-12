@@ -77,12 +77,13 @@ export const PostWidget = ({ postId, postUserId, name, description, location, pi
                 </div>
                 {isComments && (
                     <div>
-                        {comments.map((comment, i) => (
+                        <p style={{color: variables.secondColor}}>Comments comming at the next tzup version!</p>
+                        {/* {comments.map((comment, i) => (
                             <div key={`${name}-${i}`}>
                                 <Divider />
                                 <p>{comment}</p>
                             </div>
-                        ))}
+                        ))} */}
                         <Divider />
                     </div>
                 )}
