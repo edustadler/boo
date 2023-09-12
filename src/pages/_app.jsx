@@ -26,15 +26,17 @@ function MyApp({ Component, pageProps }) {
             router.push('/');
         } else if (isAuth && router.pathname === '/') {
             router.push('/homePage');
+        } else if (isAuth && router.pathname === '/homePage') {
+            router.push('/homePage');
         }
     }, [isAuth, router.pathname]);
 
     const routes = isAuth ? (<>
         <head>
-            <title>Boo study</title>
+            <title>Tzup</title>
             <meta
-                name="description"
-                content="I hope you like it, boo.world"
+                name="Tzup - social"
+                content="Connecting everywhere!"
             />
         </head>
         <Component {...pageProps} />

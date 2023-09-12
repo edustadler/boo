@@ -11,7 +11,9 @@ export const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
     const token = useSelector((state) => state.auth.token);
     const friends = useSelector((state) => state.auth.user.friends) || [];
 
-    const isFriend = friends.find((friend) => friend._id === friendId);
+    /* const isFriend = friends.find((friend) => friend._id === friendId); */
+    const isFriend = Array.isArray(friends) && friends.find((friend) => friend._id === friendId);
+
     const isNotOwnId = friendId !== _id;
 
     const API_URL = 'https://server-ggc6w24fq-edustadler.vercel.app'

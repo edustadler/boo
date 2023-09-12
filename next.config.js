@@ -12,8 +12,8 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'https://server-ggc6w24fq-edustadler.vercel.app',
-                pathname: '/assets/**',
+                hostname: 'server-ggc6w24fq-edustadler.vercel.app',
+                pathname: '/uploads/**',
             },
         ],
     },
