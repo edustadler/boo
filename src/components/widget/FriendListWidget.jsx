@@ -41,6 +41,8 @@ export const FriendListWidget = ({ userId }) => {
                 {isLoading ? (
                     <>
                         <Skeleton active avatar paragraph={{ rows: 0 }} size={'large'} />
+                        <Skeleton active avatar paragraph={{ rows: 0 }} size={'large'} />
+                        <Skeleton active avatar paragraph={{ rows: 0 }} size={'large'} />
                     </>
                 ) : (
                     Array.isArray(friends) &&
