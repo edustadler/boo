@@ -15,6 +15,7 @@ export const MyPostWidget = ({ picturePath }) => {
     const [post, setPost] = useState('')
     const [image, setImage] = useState(null)
     const [imageBase64, setImageBase64] = useState(null);
+    const [isInputEmpty, setIsInputEmpty] = useState(true);
 
     const user = useSelector((state) => state.auth.user);
     const { _id } = user;
@@ -135,7 +136,7 @@ export const MyPostWidget = ({ picturePath }) => {
                             </Dragger>
                         </Form.Item> */}
                         <Form.Item className="d-flex justify-content-end m-0">
-                            <Button type="primary" htmlType="submit" className="primary-hover">
+                            <Button type="primary" htmlType="submit" className="primary-hover" disabled={!post}>
                                 <span style={{ color: variables.primaryColor }}>Tzup!</span>
                             </Button>
                         </Form.Item>
