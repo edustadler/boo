@@ -11,6 +11,7 @@ import '/src/styles/font.scss'
 import LoginPage from './loginPage';
 import HomePage from '.';
 import ProfilePage from './profile';
+import Head from 'next/head';
 
 
 function MyApp({ Component, pageProps }) {
@@ -25,20 +26,24 @@ function MyApp({ Component, pageProps }) {
         if (!isAuth && router.pathname !== '/') {
             router.push('/');
         } else if (isAuth && router.pathname === '/') {
+            console.log('test redirect to /')
             router.push('/homePage');
+            
         } else if (isAuth && router.pathname === '/homePage') {
+            console.log('test redirect to /homePage')
             router.push('/homePage');
         }
-    }, [isAuth, router.pathname]);
+    }, [isAuth]);
 
     const routes = isAuth ? (<>
-        <head>
+        <Head>
             <title>Tzup</title>
             <meta
                 name="Tzup - social"
                 content="Connecting everywhere!"
             />
-        </head>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
         <Component {...pageProps} />
     </>) : (
         <LoginPage />
