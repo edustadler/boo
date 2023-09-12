@@ -125,7 +125,7 @@ export const MyPostWidget = ({ picturePath }) => {
                             getValueFromEvent={normFile}
                             className="d-flex justify-content-center w-100 upload-post"
                         >
-                            <Upload accept=".jpg, .jpeg, .png" listType="picture-card" multiple={false} name="picturePath" maxCount={1}>
+                            <Upload beforeUpload={() => false} accept=".jpg, .jpeg, .png" listType="picture-card" multiple={false} name="picturePath" maxCount={1}>
                                 <div style={{ color: variables.secondColor, width: '100%', minWidth: '100%' }}>
                                     <PlusOutlined />
                                     <div
