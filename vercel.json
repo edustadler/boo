@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/(.*)",
-            "destination": "tzup.vercel.app/"
+            "destination": "tzup.vercel.app/$1"
         }
     ]
 }

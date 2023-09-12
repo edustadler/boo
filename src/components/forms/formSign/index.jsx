@@ -146,7 +146,7 @@ export const FormLogin = () => {
                                 getValueFromEvent={normFile}
                                 className="d-flex justify-content-center"
                             >
-                                <Upload accept=".jpg, .jpeg, .png" listType="picture-card" multiple={false} name="picturePath" maxCount={1}>
+                                <Upload accept=".jpg, .jpeg, .png" listType="picture-card" multiple={false} name="picturePath" maxCount={1} beforeUpload={() => false}>
                                     <div style={{ color: variables.secondColor }}>
                                         <PlusOutlined />
                                         <div

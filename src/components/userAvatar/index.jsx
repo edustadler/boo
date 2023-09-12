@@ -14,7 +14,6 @@ export const UserAvatar = ({ image }) => {
                 src={`${image}`}
                 alt="User"
                 style={{backgroundColor: variables.secondColor, alignSelf: 'baseline'}}
-
             />
         </>
     )
