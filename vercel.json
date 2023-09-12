@@ -5,8 +5,15 @@
             "destination": "/"
         },
         {
-            "src": "/homePage",
-            "destination": "/homePage"
+            "source": "/homePage",
+            "destination": "/"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/[^.]+",
+            "dest": "/",
+            "status": 200
         }
     ]
 }
