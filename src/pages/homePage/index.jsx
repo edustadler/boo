@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { UserWidget } from "@/src/components/widget/UserWidget";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,6 +17,7 @@ export const config = {
 }
 
 export default function HomePage() {
+    const [refreshKey, setRefreshKey] = useState(0);
     const user = useSelector((state) => state.auth.user);
     const { _id, picturePath } = user;
     const dispatch = useDispatch();
@@ -25,6 +26,10 @@ export default function HomePage() {
     const handleSignOut = () => {
         dispatch(setLogout());
     };
+
+    const handleRefresh = useCallback(() => {
+        setRefreshKey((prevKey) => prevKey + 1);
+    }, []);
 
     if (!user) {
         return (
@@ -50,7 +55,8 @@ export default function HomePage() {
                     <div className="radius-30 overflow-hidden p-3 shadow-white">
                         <MyPostWidget picturePath={picturePath} />
                     </div>
-                    <PostsWidget userId={_id} />
+                    <button className="mt-4 shadow-white overflow-hidden p-3" style={{border: 'none', borderRadius: '20px'}} onClick={handleRefresh}>Refresh Tzup</button>
+                    <PostsWidget userId={_id} key={refreshKey} onComplete={() => setRefreshKey((prevKey) => prevKey)} />
                 </article>
                 <div className="w-25" style={{ color: variables.secondColor, background: variables.primaryColor }}>
                     <FriendListWidget userId={_id} />
