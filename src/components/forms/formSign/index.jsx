@@ -83,7 +83,6 @@ export const FormLogin = () => {
 
             if (response.ok) {
                 const data = await response.json();
-                console.log("Registration successful:", data);
                 toggleForm()
             } else {
                 console.error("Registration failed");

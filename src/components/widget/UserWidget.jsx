@@ -12,7 +12,6 @@ export const UserWidget = ({ userId, picturePath }) => {
     const API_URL = 'https://server-ggc6w24fq-edustadler.vercel.app'
 
     const getUser = async () => {
-        console.log("Token:", token);
 
         const response = await fetch(`${API_URL}/users/${userId}`, {
             method: "GET",

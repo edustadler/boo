@@ -37,6 +37,7 @@ function MyApp({ Component, pageProps }) {
                 name="Tzup - social"
                 content="Connecting everywhere!"
             />
+            <link rel="icon" href="/favicon.ico" sizes="any" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <Component {...pageProps} />
