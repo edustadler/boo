@@ -10,10 +10,10 @@ export const UserAvatar = ({ image }) => {
     return (
         <>
             <Avatar
-                size={{ xs: 24, sm: 32, md: 40, lg: 50, xl: 60, xxl: 80 }}
+                size={{ xs: 40, sm: 40, md: 40, lg: 50, xl: 60, xxl: 80 }}
                 src={`${image}`}
                 alt="User"
-                style={{backgroundColor: variables.secondColor}}
+                style={{backgroundColor: variables.secondColor, alignSelf: 'baseline'}}
 
             />
         </>

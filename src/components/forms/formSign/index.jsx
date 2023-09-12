@@ -214,6 +214,10 @@ export const FormLogin = () => {
                                         required: true,
                                         message: "Please input your Password!",
                                     },
+                                    {
+                                        min: 6,
+                                        message: 'Password must be at least 6 characters long!',
+                                    },
                                 ]}
                             >
                                 <Input
@@ -283,7 +287,7 @@ export const FormLogin = () => {
                                 <Button type="primary" htmlType="submit" noStyle className="w-100 primary-hover" loading={loginLoading}>
                                     <span style={{ color: variables.primaryColor }}>Log in</span>
                                 </Button>
-                                <span style={{ color: variables.secondColor }}>Or <span style={{cursor: 'pointer', color: variables.orangeColor}} onClick={toggleForm}>register now</span></span>
+                                <span style={{ color: variables.secondColor }}>Or <span style={{ cursor: 'pointer', color: variables.orangeColor }} onClick={toggleForm}>register now</span></span>
                             </Form.Item>
                         </Form>
                     </>

@@ -113,10 +113,10 @@ export const MyPostWidget = ({ picturePath }) => {
     return (
         <>
             <div className="d-flex align-items-center gap-3">
-                <UserAvatar image={picturePath} />
+                <UserAvatar image={picturePath} style={{ alignSelf:'baseline'}}/>
                 <div style={{ width: '90%' }}>
                     <Form onFinish={handlePost} form={form} className="d-flex align-items-end flex-column">
-                        <Form.Item name='description' style={{ width: '100%', marginBottom: '0' }}>
+                        <Form.Item name='description' style={{ width: '100%', marginBottom: '1rem' }}>
                             <Input className="input-post" placeholder="What's up! Tell something new..." size="large" style={{ width: '90%', background: variables.primaryColor, border: 'none', color: variables.secondColor }} onChange={(e) => setPost(e.target.value)} value={post} />
                         </Form.Item>
                         <Form.Item
