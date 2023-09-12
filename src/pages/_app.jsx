@@ -25,7 +25,9 @@ function MyApp({ Component, pageProps }) {
         const isAuth = Boolean(store.getState().auth.token);
         if (!isAuth && router.pathname !== '/') {
             router.push('/');
-        } else if (isAuth && router.pathname === '/' || isAuth && router.pathname === '/homePage') {
+        } else if (isAuth && router.pathname === '/') {
+            router.push('/homePage');
+        } else if (isAuth && router.pathname === '/homePage') {
             router.push('/homePage');
         }
     }, [isAuth, router.pathname]);
@@ -41,9 +43,18 @@ function MyApp({ Component, pageProps }) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <Component {...pageProps} />
-    </>) : (
+    </>) : (<>
+        <Head>
+            <title>Tzup</title>
+            <meta
+                name="Tzup - social"
+                content="Connecting everywhere!"
+            />
+            <link rel="icon" href="/favicon.ico" sizes="any" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
         <LoginPage />
-    );
+    </>);
 
     return <div className="app">{routes}</div>;
 }
