@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
             
         } else if (isAuth && router.pathname === '/homePage') {
             console.log('test redirect to /homePage')
-            router.push('/homePage');
+            router.push('/');
         }
     }, [isAuth]);
 
