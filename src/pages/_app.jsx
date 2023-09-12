@@ -26,12 +26,7 @@ function MyApp({ Component, pageProps }) {
         if (!isAuth && router.pathname !== '/') {
             router.push('/');
         } else if (isAuth && router.pathname === '/') {
-            console.log('test redirect to /')
             router.push('/homePage');
-            
-        } else if (isAuth && router.pathname === '/homePage') {
-            console.log('test redirect to /homePage')
-            router.push('/');
         }
     }, [isAuth]);
 
