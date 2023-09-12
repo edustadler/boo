@@ -25,10 +25,10 @@ function MyApp({ Component, pageProps }) {
         const isAuth = Boolean(store.getState().auth.token);
         if (!isAuth && router.pathname !== '/') {
             router.push('/');
-        } else if (isAuth && router.pathname === '/') {
+        } else if (isAuth && router.pathname === '/' || isAuth && router.pathname === '/homePage') {
             router.push('/homePage');
         }
-    }, [isAuth]);
+    }, [isAuth, router.pathname]);
 
     const routes = isAuth ? (<>
         <Head>
