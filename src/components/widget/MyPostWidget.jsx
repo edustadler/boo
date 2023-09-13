@@ -139,7 +139,7 @@ export const MyPostWidget = ({ picturePath }) => {
                                     </div>
                                 </div>
                             </Upload>
-                            <p style={{color: variables.secondColor}}>Max size: 800kb</p>
+                            <p style={{color: variables.secondColor}}>It's just a beta version, so Max size: 800kb</p>
                         </Form.Item>
                         {/* <Form.Item
                             name="picturePath"
